@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-size: 30pt;
+    border-bottom: 3px dashed black;
+    line-height: 50pt;
+    font-family: Sofia Sans, sans-serif;
+    color: black;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link {
+    color: black;
+}
+
+header a:visited {
+    color: black;
+}
+
+header a:focus {
+    color: black;
+}
+
+header a:hover {
+    color: black;
+}
+
+header a:active {
+    color: black;
+}
+
+footer {
+    height: 270px;
+    line-height: 14;
+    text-align: center;
+    color: #ffffff;
+    background: rgb(47,73,215);
+    background: linear-gradient(0deg, rgba(47,73,215,1) 0%, rgba(47,72,203,0.42370451598608194) 70%, rgba(47,70,189,0) 100%);
+    font-family: Sofia Sans, sans-serif;
+    font-size: larger;
+}
