@@ -1,0 +1,40 @@
+#astronafts {
+    margin: 20px 5ch;
+}
+
+#astronafts h1 {
+    text-align: left;
+    line-height: 50px;
+    font-size: 35px;
+}
+
+.list-record {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.record {
+    position: relative;
+    width: 15em;
+    margin: 20px auto;
+}
+
+.record img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.record p {
+    text-align: center;
+    width: 100%;
+    margin: 15px 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+.record h2 {
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+    font-size: large;
+    font-family: 'Unbounded', cursive;
+}
