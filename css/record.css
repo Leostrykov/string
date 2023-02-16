@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5 {
 
 p {
     max-width: 10px 0;
+    margin-bottom: 10px;
     font-family: 'Overpass', sans-serif;
 }
 
@@ -35,7 +36,7 @@ header h3 {
 #img_record img {
     display: flex;
     width: 95vw;
-    height: 50ch;
+    /*height: 70ch;*/
     border-radius: 10px;
     object-fit: cover;
     margin: 0 auto;
@@ -69,14 +70,27 @@ header h3 {
     color: #898989;
 }
 
-@media screen and (max-width: 480px) {
+.resurs {
+    font-size: 20px;
+    font-family: Sofia Sans, sans-serif;
+}
+
+@media screen and (width <= 480px) {
     #text {
-        width: 90%;
+        width: 100%;
+    }
+
+    .img_in_text img {
+        width: 75vw;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (481px <= width <= 768px) {
     #text {
         width: 95%;
+    }
+
+    .img_in_text img {
+        width: 70vw;
     }
 }
