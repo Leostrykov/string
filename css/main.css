@@ -1,3 +1,21 @@
+@font-face { 
+    font-family: "Overpass";
+    src:url(fonts/Overpass-Regular.woff) format("woff"),
+        url(fonts/Overpass-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Sofia Sans";
+    src:url(fonts/SofiaSans-Bold.ttf) format("truetype"),
+        url(fonts/SofiaSans-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Unbounded";
+    src: url(fonts/Unbounded-Regular.ttf) format("truetype"),
+        url(fonts/Unbounded-Regular.woff) format("woff");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +29,10 @@ h1, h2, h3, h4, h5 {
 header {
     width: 100%;
     font-size: 30pt;
-    border-bottom: 2px ridge black;
+    -webkit-box-shadow: 1px 12px 5px -5px rgba(108, 108, 112, 0.6);
+    -moz-box-shadow: 1px 12px 5px -5px rgba(108, 108, 112, 0.6);
+    box-shadow: 1px 12px 5px -5px rgba(108, 108, 112, 0.6);
+    border-radius: 0 0 20px 20px;
     line-height: 50pt;
     font-family: Sofia Sans, sans-serif;
     color: black;
@@ -41,14 +62,33 @@ header a:active {
     color: black;
 }
 
+a {
+    text-decoration: ridge;
+}
+
+a:link {
+    color: rgb(0, 0, 255);
+}
+
+a:visited {
+    color: rgb(116, 58, 215);
+}
+
+a:hover {
+    color: #0026ff;
+}
+
+a:active {
+    color: #0026ff;
+}
+
 footer {
     height: 270px;
     line-height: 14;
     text-align: center;
     color: #ffffff;
-    background: rgb(47,73,215);
-    background: linear-gradient(0deg, rgba(47,73,215,1) 0%, rgba(47,72,203,0.42370451598608194) 70%, rgba(47,70,189,0) 100%);
-    font-family: Sofia Sans, sans-serif;
+    background: linear-gradient(0deg, #2f49d7 0%, rgba(47,72,203,0.42370451598608194) 70%, rgba(47,70,189,0) 100%);
+    font-family: 'Sofia Sans', sans-serif;
     font-size: larger;
 }
 
@@ -71,9 +111,60 @@ footer {
     box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
     transition: .3s;
   }
-  .floating-button:hover {
+.floating-button:hover {
     background: #2e6be5;
     box-shadow: 0 15px 20px rgba(52, 46, 229, 0.4);
     color: white;
     transform: translateY(-7px);
+}
+
+ol, ul {
+    font-family: 'Overpass', sans-serif;
+    padding: 10px 20px;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+/*Tooltip text*/
+.tooltip {
+    position: relative;
+    color: #5152e2;
+  }
+  
+  .tooltip .tooltip-text {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    visibility: hidden;
+    max-width: 300px;
+    background-color: #5152e2;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: .3s;
+    transform: translate3d(0px, 20px, 0px);
+  }
+  
+  .tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5152e2 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
   }

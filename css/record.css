@@ -1,12 +1,30 @@
+@font-face { 
+    font-family: 'Overpass';
+    src:url(fonts/Overpass-Regular.woff) format("woff"),
+        url(fonts/Overpass-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Sofia Sans';
+    src:url(fonts/SofiaSans-Bold.ttf) format("truetype"),
+        url(fonts/SofiaSans-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url(fonts/Unbounded-Regular.ttf) format("truetype"),
+        url(fonts/Unbounded-Regular.woff) format("woff");
+}
+
 h1, h2, h3, h4, h5 {
     margin: 20px 0;
-    font-family: 'Unbounded', cursive;
+    font-family: Unbounded;
 }
 
 p {
     max-width: 10px 0;
     margin-bottom: 10px;
-    font-family: 'Overpass', sans-serif;
+    font-family: Overpass;
 }
 
 header h3 {
@@ -14,7 +32,7 @@ header h3 {
     display: flex;
     margin: auto;
     text-align: left;
-    font-family: Sofia Sans, sans-serif;
+    font-family: Sofia Sans;
 }
 
 #header_record {
@@ -72,7 +90,34 @@ header h3 {
 
 .resurs {
     font-size: 20px;
-    font-family: Sofia Sans, sans-serif;
+    font-family: Sofia Sans;
+}
+
+#сontent {
+    background: #cfcdeaa9;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.cont_link {
+    text-decoration: wavy black;
+}
+
+.cont_link:link {
+    color: black;
+}
+
+.cont_link:visited {
+    color: black;
+}
+
+.cont_link:hover {
+    color: #2f49d7;
+}
+
+.cont_link ol a:active {
+    color: #2f49d7;
 }
 
 @media screen and (width <= 480px) {
